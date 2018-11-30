@@ -1,0 +1,33 @@
+# Variables that point to SystemC and TLM installation path
+
+SYSTEMC_HOME = /space/tools/systemc/systemc-2.3.1
+AMS_HOME = /space/tools/systemc/systemc-ams-2.0_alpha1
+
+INCDIR = \
+-I. -I.. -I../src        \
+-I$(AMS_HOME)/src      \
+-I$(SYSTEMC_HOME)/include \
+-I$(SYSTEMC_HOME)/src/sysc/libs  \
+-I$(SYSTEMC_HOME)/src/sysc/kernel
+
+EXE    = $(MODULE).x
+
+%.o: ../src/%.cpp
+	$(GCC_PATH)$(CC) $(CFLAGS) $(INCDIR) $<
+
+%.o: ../src/%.cc
+	$(GCC_PATH)$(CC) $(CFLAGS) $(INCDIR) $<
+
+$(EXE): $(OBJS) 
+	$(GCC_PATH)$(CC) -g $(INCDIR) -o $@ $(OBJS) $(AMS_HOME)/lib-linux64/libsystemc-ams.a $(SYSTEMC_HOME)/lib-linux64/libsystemc.a -lpthread 2>&1 | c++filt 
+
+clean::
+	rm -f $(OBJS) *~ $(EXE) core
+
+ultraclean: clean
+	rm -f Makefile.deps
+
+Makefile.deps:
+	$(GCC_PATH)$(CC) $(CFLAGS) $(INCDIR) -M $(SRCS) $(SRCS_BUS)>> Makefile.deps
+
+include Makefile.deps
