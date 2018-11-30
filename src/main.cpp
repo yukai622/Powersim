@@ -99,7 +99,7 @@ int sc_main(int argc, char* argv[]){
 
 //	sc_start();
 	sc_start(86400, sc_core::SC_SEC);
-	cout<<"YUKAI: SIMULATION STOP AT "<<" @"<<sc_time_stamp()<<endl;
+	cout<<"YUKAI:The WHOLE  SIMULATION STOP AT "<<" @"<<sc_time_stamp()<<endl;
 	
 	//sca_util::sca_close_tabular_trace_file( atf );	
 	
