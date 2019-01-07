@@ -15,7 +15,7 @@ Example for reading MAT file in systemC
 MATFile *pmatFile = NULL;
 mxArray *pMxArray = NULL;
  
-// 读取.mat文件（例：mat文件名为"initUrban.mat"，其中包含"initA"）
+
 double *initA;
  
 pmatFile = matOpen("initUrban.mat","r");
@@ -31,7 +31,7 @@ for (int i=0; i<M; i++)
 matClose(pmatFile);
 mxFree(initA);
  
-// 生成.mat文件
+
 double *outA = new double[M*N];
 	for (int i=0; i<M; i++)
 		for (int j=0; j<N; j++)
@@ -41,4 +41,4 @@ pMxArray = mxCreateDoubleMatrix(M, N, mxREAL);
 mxSetData(pMxArray, outA);
 matPutVariable(pmatFile, "A", pMxArray);
 matClose(pmatFile);
---------------------- 
+
