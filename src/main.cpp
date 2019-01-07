@@ -3,7 +3,7 @@
 #include "battery.h"
 #include "cti_bus.h"
 #include "pv_panel.h"
-#include "wt_lut.h"
+#include "wind_turbine.h"
 #include "battery_converter.h"
 #include "pv_converter.h"
 #include "wind_inverter.h"

@@ -23,7 +23,7 @@ SRCS =  ../src/battery_voc.cpp ../src/battery_converter.cpp \
 	../src/battery.cpp \
 	../src/cti_bus.cpp ../src/pv_converter.cpp \
 	../src/pv_panel.cpp ../src/wind_inverter.cpp \
-	../src/load.cpp ../src/wt_lut.cpp \
+	../src/load.cpp ../src/wind_turbine.cpp \
 	../src/main.cpp
 
 #../src/main.cpp
