@@ -18,9 +18,11 @@ SCA_TDF_MODULE(cti_bus){
 	sca_tdf::sca_out<double> Vwind_inv;
 
 	//Ports connect to Grid load
-	sca_tdf::sca_in<double> Pload;
+	sca_tdf::sca_in<double> Phouse1;
+	sca_tdf::sca_in<double> Phouse2;
+	sca_tdf::sca_in<double> Phouse5;
 
-	SCA_CTOR(cti_bus): vref_cti(430.0),Ibatt_tmp(0.0), SOC("SOC"), Ibatt_cnv("Ibatt_cnv"),Vbatt_cnv("Vbatt_cnv"), Ipv_cnv("Ipv_cnv"), Vpv_cnv("Vpv_cnv"), Iwind_inv("Iwind_inv"), Vwind_inv("Vwind_inv"), Pload("PLoad") {}
+	SCA_CTOR(cti_bus): vref_cti(430.0),Ibatt_tmp(0.0),total_power(0.0), SOC("SOC"), Ibatt_cnv("Ibatt_cnv"),Vbatt_cnv("Vbatt_cnv"), Ipv_cnv("Ipv_cnv"), Vpv_cnv("Vpv_cnv"), Iwind_inv("Iwind_inv"), Vwind_inv("Vwind_inv"), Phouse1("Phouse1"), Phouse2("Phouse2"), Phouse5("Phouse5") {}
 
 	void set_attributes();
 
@@ -29,7 +31,7 @@ SCA_TDF_MODULE(cti_bus){
 	void processing();
 
 	private:
-	 double vref_cti,Ibatt_tmp;
+	 double vref_cti, Ibatt_tmp, total_power;
 
 };
 

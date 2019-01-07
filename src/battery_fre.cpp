@@ -46,8 +46,8 @@ void battery_fre::processing(){
 	//cout<<"delta_freq "<<delta_freq<<" @ "<<sc_time_stamp()<<endl;
  	//cout<<"delta_crate "<<delta_freq<<" @ "<<sc_time_stamp()<<endl;
 
-	out.write(delta_crate);
-	//out.write(0.0);
+	//out.write(delta_crate);
+	out.write(0.0);
 	out2.write(0.0);
 	//out2.write(delta_freq);
 	//

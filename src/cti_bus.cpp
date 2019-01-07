@@ -12,18 +12,23 @@ void cti_bus::initialize(){
 }
 
 void cti_bus::processing(){
-	Vbatt_cnv.write(vref_cti);
-	Vpv_cnv.write(vref_cti);
-	Vwind_inv.write(vref_cti);
+
+	// The constant dc bus voltage connection 
+	Vbatt_cnv.write(vref_cti); //dcdc converter for battery
+	Vpv_cnv.write(vref_cti);   //dcdc converter for pv panel
+	Vwind_inv.write(vref_cti); //dcac converter for wind turbine
+
+	// Compute the total power comsumption from load side
+	total_power = (Phouse1.read() + Phouse2.read() + Phouse5.read());
 
 	// Determine charge or discharge battery
-	Ibatt_tmp = (Pload.read() - (Ipv_cnv.read()*vref_cti) - (Iwind_inv.read()*vref_cti))/vref_cti;
-//	cout<<Ibatt_tmp<<endl;
+	Ibatt_tmp = (total_power - (Ipv_cnv.read()*vref_cti) - (Iwind_inv.read()*vref_cti))/vref_cti;
+	
+	
 	if(Ibatt_tmp > 0){
 		Ibatt_cnv.write(0.0001);
 	}else{
 		Ibatt_cnv.write(0.0001);
-	//	Ibatt_cnv.write(0.1);
 	}
 
 }
