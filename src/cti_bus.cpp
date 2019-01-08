@@ -38,7 +38,7 @@ void cti_bus::processing(){
 		}else { // Battery is dead, cannot provide any more; the power need buy from grid;
 
 			Ibatt_cnv.write(0.0); // Battery no action;
-			Buy_from_grid.write(Ibatt_tmp); // Store the value of buy from grid
+			Buy_from_grid.write(Ibatt_tmp * VBUS); // Store the value of buy from grid
 
 		}
 
@@ -50,7 +50,7 @@ void cti_bus::processing(){
 		}else { // Battery is fully charged, cannot charge anymore, the extra power can sell to grid
 
 			Ibatt_cnv.write(0.0); // Battery no action
-			Sell_to_grid.write(Ibatt_tmp); // Store the value for selling to grid
+			Sell_to_grid.write(Ibatt_tmp * VBUS); // Store the value for selling to grid
 		
 		}
 	}
