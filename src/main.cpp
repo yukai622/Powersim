@@ -14,7 +14,8 @@
 
 int sc_main(int argc, char* argv[]){
 	//Signals for battery parts
-	sca_tdf::sca_signal<double> Ibatt, Vbatt, SOC, Ibatt_cnv, Vbatt_cnv;
+	//sca_tdf::sca_signal<double> Ibatt, Vbatt, SOC, Ibatt_cnv, Vbatt_cnv;
+	sca_tdf::sca_signal<double> Ibatt, Vbatt, SOC, Ibatt_cnv;
 
 	//Signals for PV parts
 	//sca_tdf::sca_signal<double> Power_pv, Ipv_cnv, Vpv_cnv;  
@@ -25,6 +26,8 @@ int sc_main(int argc, char* argv[]){
 	sca_tdf::sca_signal<double> Power_wind, Iwind_inv, wind_speed;
 
 	sca_tdf::sca_signal<double> Phouse1, Phouse2, Phouse5;	
+
+	sca_tdf::sca_signal<double> buy, sell;	
 
 	//Singals for management
 	//
@@ -93,6 +96,9 @@ int sc_main(int argc, char* argv[]){
 	cti_bus.Phouse1(Phouse1);		
 	cti_bus.Phouse2(Phouse2);		
 	cti_bus.Phouse5(Phouse5);		
+
+	cti_bus.Buy_from_grid(buy);		
+	cti_bus.Sell_to_grid(sell);		
 	
 
 	//sca_util::sca_decimation(1000);

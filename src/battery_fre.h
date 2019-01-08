@@ -1,7 +1,6 @@
 #include "systemc-ams.h"
 #include "tstep.h"
 
-#define TIMINGWIN 32
 
 SCA_TDF_MODULE(battery_fre){
 	sca_tdf::sca_in<double> in,in2; //I load current. SOC

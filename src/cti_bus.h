@@ -23,11 +23,15 @@ SCA_TDF_MODULE(cti_bus){
 	sca_tdf::sca_in<double> Phouse2;
 	sca_tdf::sca_in<double> Phouse5;
 
+	// Buy or Sell from/to utility grid
+	sca_tdf::sca_out<double> Buy_from_grid;
+	sca_tdf::sca_out<double> Sell_to_grid;
+
 	// All signals
 	//SCA_CTOR(cti_bus): vref_cti(430.0),Ibatt_tmp(0.0),total_power(0.0), SOC("SOC"), Ibatt_cnv("Ibatt_cnv"),Vbatt_cnv("Vbatt_cnv"), Ipv_cnv("Ipv_cnv"), Vpv_cnv("Vpv_cnv"), Iwind_inv("Iwind_inv"), Vwind_inv("Vwind_inv"), Phouse1("Phouse1"), Phouse2("Phouse2"), Phouse5("Phouse5") {}
 	
 	// Omit bus votage, define it as VBUS
-	SCA_CTOR(cti_bus): Ibatt_tmp(0.0),total_power(0.0), SOC("SOC"), Ibatt_cnv("Ibatt_cnv"), Ipv_cnv("Ipv_cnv"), Iwind_inv("Iwind_inv"), Phouse1("Phouse1"), Phouse2("Phouse2"), Phouse5("Phouse5") {}
+	SCA_CTOR(cti_bus): Ibatt_tmp(0.0),total_load(0.0),total_generation(0.0), SOC("SOC"), Ibatt_cnv("Ibatt_cnv"), Ipv_cnv("Ipv_cnv"), Iwind_inv("Iwind_inv"), Buy_from_grid("Buy_from_grid"), Sell_to_grid("Sell_to_grid"), Phouse1("Phouse1"), Phouse2("Phouse2"), Phouse5("Phouse5") {}
 
 	void set_attributes();
 
@@ -37,7 +41,7 @@ SCA_TDF_MODULE(cti_bus){
 
 	private:
 //	 double vref_cti, Ibatt_tmp, total_power;
-	 double Ibatt_tmp, total_power;
+	 double Ibatt_tmp, total_load, total_generation;
 
 };
 

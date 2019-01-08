@@ -2,7 +2,7 @@
 #include "tstep.h"
 
 SCA_TDF_MODULE(battery_voc){
-	sca_tdf::sca_in<double> in, in2,in3; //SOC, V_lost_C, V_lost_F
+	sca_tdf::sca_in<double> in, in2, in3; //SOC, V_lost_C, V_lost_F
 	sca_tdf::sca_out<double> out, out2, out3, out4; //Voc, Resistor, SOC, SOC
 	
 
