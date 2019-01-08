@@ -53,7 +53,7 @@ int sc_main(int argc, char* argv[]){
 	//Battery converter
 	batt_con.in(Vbatt);
 	batt_con.in2(Ibatt_cnv);
-	batt_con.in3(Vbatt_cnv);
+//	batt_con.in3(Vbatt_cnv);
 	batt_con.out(Ibatt);	
 
 	//PV panel
@@ -82,7 +82,7 @@ int sc_main(int argc, char* argv[]){
 	//BUS
 	cti_bus.SOC(SOC);
 	cti_bus.Ibatt_cnv(Ibatt_cnv);
-	cti_bus.Vbatt_cnv(Vbatt_cnv);
+//	cti_bus.Vbatt_cnv(Vbatt_cnv);
 
 	cti_bus.Ipv_cnv(Ipv_cnv);
 //	cti_bus.Vpv_cnv(Vpv_cnv);
