@@ -2,7 +2,7 @@ The UK-DALE dataset, domestic appliance-level electricity demand and whole-house
 
 1 second data
 There are four columns in each CSV file recording the whole-house power demand every second:
-(1) UNIX timestamp.
+(1) UNIX timestamp. (GMT 2013/03/18 00:00 to 7days)
 (2) Active power (watts).
 (3) Apparent power (volt-amperes).
 (4) Mains RMS voltage.
