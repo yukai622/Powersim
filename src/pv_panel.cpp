@@ -51,7 +51,7 @@ void pv_panel::processing()
   }
   
   t++; 
-  if (t == SAMPLES) {
+  if (t == LENGTH) {
     cout<<"YUKAI: STOP BY PV PV"<<endl;
     cout<<"Simulation ended: "<<" @"<<sc_time_stamp()<<endl;
     sc_stop();
