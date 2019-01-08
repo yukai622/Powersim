@@ -2,10 +2,12 @@
 #include "tstep.h"
 
 SCA_TDF_MODULE(house1){
+
 	sca_tdf::sca_out<double>out; // Real Power = Apparent power * power factor
-//	unsigned int i;
 	
 	ifstream house1powerfile;
+
+
 	double rp; // real power
 	double ap; // apparent power
 	double pf; // power factor

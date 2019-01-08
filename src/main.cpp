@@ -17,7 +17,8 @@ int sc_main(int argc, char* argv[]){
 	sca_tdf::sca_signal<double> Ibatt, Vbatt, SOC, Ibatt_cnv, Vbatt_cnv;
 
 	//Signals for PV parts
-	sca_tdf::sca_signal<double> Power_pv, Ipv_cnv, Vpv_cnv;  
+	//sca_tdf::sca_signal<double> Power_pv, Ipv_cnv, Vpv_cnv;  
+	sca_tdf::sca_signal<double> Power_pv, Ipv_cnv, sun_irradiance;  
 
 	//Signals for wind turbine
 	sca_tdf::sca_signal<double> Power_wind, Vwind_inv, Iwind_inv, wind_speed;
@@ -56,10 +57,11 @@ int sc_main(int argc, char* argv[]){
 
 	//PV panel
 	pv.P(Power_pv);
+	pv.sun_irradiance(sun_irradiance);
 	
 	//PV converter
 	pv_con.in(Power_pv);
-	pv_con.in2(Vpv_cnv);
+	//pv_con.in2(Vpv_cnv);
 	pv_con.out(Ipv_cnv);
 
 	//Wind turbine
@@ -82,7 +84,7 @@ int sc_main(int argc, char* argv[]){
 	cti_bus.Vbatt_cnv(Vbatt_cnv);
 
 	cti_bus.Ipv_cnv(Ipv_cnv);
-	cti_bus.Vpv_cnv(Vpv_cnv);
+	//cti_bus.Vpv_cnv(Vpv_cnv);
 
 	cti_bus.Iwind_inv(Iwind_inv);
 	cti_bus.Vwind_inv(Vwind_inv);
@@ -93,20 +95,26 @@ int sc_main(int argc, char* argv[]){
 	
 
 	//sca_util::sca_decimation(1000);
-	// To store the values during simualtion
+	//
+	//To store the values during simualtion
 	sca_util::sca_trace_file* atf = sca_util::sca_create_tabular_trace_file( "trace.txt" );
-//	atf->set_mode(sca_decimation(1000));
+
+	atf->set_mode(sca_decimation(100));
+
+
 //	sca_util::sca_trace(atf,SOC,"SOC");
+//	sca_util::sca_trace(atf,Phouse1,"Phouse1");
 
-	sca_util::sca_trace(atf,Phouse1,"Phouse1");
-	sca_util::sca_trace(atf,wind_speed,"Wind");
+//	sca_util::sca_trace(atf,wind_speed,"Wind");
+//	sca_util::sca_trace(atf,Power_wind,"Power_wind");
 
-	sca_util::sca_trace(atf,Power_wind,"Power_wind");
+	sca_util::sca_trace(atf,sun_irradiance,"Sun_profile");
 	sca_util::sca_trace(atf,Power_pv,"Power_pv");
 
 //	sc_start();
-	sc_start(2, sc_core::SC_SEC);
-	cout<<"YUKAI:The WHOLE  SIMULATION STOP AT "<<" @"<<sc_time_stamp()<<endl;
+	sc_start(ONEDAY, sc_core::SC_SEC);
+
+	cout<<"YUKAI:The WHOLE SIMULATION STOP"<<" @"<<sc_time_stamp()<<endl;
 	
 	//sca_util::sca_close_tabular_trace_file( atf );	
 	

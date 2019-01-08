@@ -25,12 +25,16 @@ void house5::processing(){
 
 	house5powerfile >> rp >> ap >> pf;
 
-	cout<< rp<<"\t" << ap<<"\t" << pf<<endl;
+//	cout<< rp<<"\t" << ap<<"\t" << pf<<endl;
 //	cout<<rp<<"The real power value"<<endl;
 //	cout<<"The apparent power is"<<ap<<endl;
 //	cout<<"The power factor is"<<pf<<endl;
+
+
 	out.write(((0.001*1000)/0.95)/0.8);// Effciency, Power factor
-	//out.write(wave[i]);// Effciency, Power factor
-	//cout<<wave[i]<<endl;	
-//	i++;
+
 }
+
+
+
+

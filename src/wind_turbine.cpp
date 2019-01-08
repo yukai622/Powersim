@@ -9,17 +9,17 @@ void windturbine::set_attributes()
 void windturbine::initialize()
 {
   unsigned int i;
-  ifstream inwind; 
+  ifstream in_wind_speed; 
   
-  inwind.open("wind_one_week_1s.txt");
-  if (!inwind) {
+  in_wind_speed.open("wind_one_week_1s.txt");
+  if (!in_wind_speed) {
     cout << "Cannot open file.\n"<< endl;
     exit(-1);
   }
-  for (i=0;  i<SAMPLES; i++) {
-    inwind >> wind[i];
+  for (i=0;  i<LENGTH; i++) {
+    in_wind_speed >> wind[i];
   }
-  inwind.close();
+  in_wind_speed.close();
 
  
 }
@@ -31,15 +31,14 @@ void windturbine::processing()
   double wtp; 
   
   wtp = 11200*sin(0.1562*wind[t]-0.623) + 2015*sin(0.6514*wind[t]+0.2421); 
-  //wtp = wind[t]*0.5;
 
   
   power.write(wtp); 
   windspeed.write(wind[t]);
   
   t++; 
-  if (t == SAMPLES) {
-    cout<<"YUKAI: STOP BY SAMPLES"<<endl;
+  if (t == LENGTH) {
+    cout<<"YUKAI: Wind Turbine works very well to the end!"<<endl;
     cout<<"Simulation ended: "<<" @"<<sc_time_stamp()<<endl;
     sc_stop();
   }
