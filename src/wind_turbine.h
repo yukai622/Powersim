@@ -8,7 +8,9 @@ SCA_TDF_MODULE (windturbine)
   
   sca_tdf::sca_out<double> power,windspeed; 
 
-  double wind[LENGTH];// Define in tstep.h 
+  double wind;
+
+  ifstream in_wind_speed;
 
   unsigned int t;
 

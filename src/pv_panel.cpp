@@ -40,7 +40,8 @@ void pv_panel::initialize()
 void pv_panel::processing()
 {  
   
-  top >> Gtop >> Gwest;
+  top >> Gtop;
+  Gwest = Gtop;
 
   double Ptop, Pback; 
   
@@ -63,14 +64,17 @@ void pv_panel::processing()
 
   sun_irradiance.write(Gtop);
   
+
+
+  if (t == ONEDAY) {
+    cout<<"YUKAI Report: PV panel works correctly until to the end!"<<endl;
+//    cout<<"Simulation ended: "<<" @"<<sc_time_stamp()<<endl;
+    top.close();
+
+  }
+
   t++;
 
-  if (t == LENGTH) {
-    cout<<"YUKAI: PV works very well until to the end!"<<endl;
-    cout<<"Simulation ended: "<<" @"<<sc_time_stamp()<<endl;
-    top.close();
-    sc_stop();
-  }
 }
 
 
