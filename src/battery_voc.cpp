@@ -15,7 +15,7 @@ void battery_voc::initialize(){
 void battery_voc::processing(){
 	double tmpcurrent = in.read();
 	
-	tmpsoc = tmpsoc-((tmpcurrent*SIM_STEP)/(3600*150.0)); //Modify the capacity
+	tmpsoc = tmpsoc-((tmpcurrent*SIM_STEP)/(3600*10.0)); //Modify the capacity, 150Ah is the reference one
 
 	double deltacurrent = in2.read();
 	double deltafrequency = in3.read();
@@ -24,10 +24,10 @@ void battery_voc::processing(){
 
 
 	// Battery mangagement unit: if the SOC of battery less than 10%, the battery stop to work
-	if(tmpsoc<=0.1){
-		cout<<"SOC is less than or equal to 10%: "<<tmpsoc<<" @"<<sc_time_stamp()<<endl;
-		sc_stop();
-	}
+//	if(tmpsoc<=0.1){
+//		cout<<"SOC is less than or equal to 10%: "<<tmpsoc<<" @"<<sc_time_stamp()<<endl;
+//		sc_stop();
+//	}
 	
 	
 	//12V 150Ah battery

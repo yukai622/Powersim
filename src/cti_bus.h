@@ -39,7 +39,7 @@ SCA_TDF_MODULE(cti_bus){
 
 	void processing();
 
-	private:
+//	private:
 //	 double vref_cti, Ibatt_tmp, total_power;
 	 double Ibatt_tmp, total_load, total_generation;
 

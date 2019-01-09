@@ -8,7 +8,7 @@ void house5::set_attributes(){
 void house5::initialize(){
 	int j =0;
 	
-	house5powerfile.open("../loads/UKLOAD/one_week_h2.txt");
+	house5powerfile.open("../loads/UKLOAD/one_week_h5.txt");
 	if(!house5powerfile){
 		cout<<"Cannot open loads file.!!!\n"<<endl;
 		
@@ -31,7 +31,7 @@ void house5::processing(){
 //	cout<<"The power factor is"<<pf<<endl;
 
 
-	out.write((rp*5.0)/0.95);// Effciency
+	out.write((rp*3.0)/0.95);// Effciency
 
 }
 

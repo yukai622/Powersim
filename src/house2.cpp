@@ -33,6 +33,7 @@ void house2::processing(){
 
 	out.write(rp/0.95);// Effciency
 
+
 }
 
 
