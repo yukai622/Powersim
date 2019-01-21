@@ -1,4 +1,3 @@
-
 #include "systemc-ams.h"
 #include "battery_char.h"
 #include "battery_voc.h"

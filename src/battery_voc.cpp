@@ -15,7 +15,7 @@ void battery_voc::initialize(){
 void battery_voc::processing(){
 	double tmpcurrent = in.read();
 	
-	tmpsoc = tmpsoc-((tmpcurrent*SIM_STEP)/(3600*10.0)); //Modify the capacity, 150Ah is the reference one
+	tmpsoc = tmpsoc-((tmpcurrent*SIM_STEP)/(3600*200.0)); //Modify the capacity, 150Ah is the reference one
 
 	double deltacurrent = in2.read();
 	double deltafrequency = in3.read();
@@ -31,7 +31,7 @@ void battery_voc::processing(){
 	
 	
 	//12V 150Ah battery
-	out.write((24.56*pow(tmpsoc,5)-71.5*pow(tmpsoc,4)+78.45*pow(tmpsoc,3)-40.51*pow(tmpsoc,2)+10.23*tmpsoc+2.067)*40);
+	out.write((24.56*pow(tmpsoc,5)-71.5*pow(tmpsoc,4)+78.45*pow(tmpsoc,3)-40.51*pow(tmpsoc,2)+10.23*tmpsoc+2.867)*40);
 	//out2.write(0.0042*exp(-0.07909*tmpsoc)-0.0035);
 	out2.write(0.005);
 	out3.write(tmpsoc);

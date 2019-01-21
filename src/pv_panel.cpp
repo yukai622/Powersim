@@ -66,7 +66,7 @@ void pv_panel::processing()
   
 
 
-  if (t == ONEDAY) {
+  if (t == ONEDAY - 1) {
     cout<<"YUKAI Report: PV panel works correctly until to the end!"<<endl;
 //    cout<<"Simulation ended: "<<" @"<<sc_time_stamp()<<endl;
     top.close();
