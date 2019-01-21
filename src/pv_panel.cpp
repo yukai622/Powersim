@@ -46,8 +46,8 @@ void pv_panel::processing()
   double Ptop, Pback; 
   
   // Original equations
-  Ptop = 4.752e-09*pow(Gtop,3) - 7.352e-06*pow(Gtop,2) + 0.02238*Gtop - 0.6954; 
-  Pback = 4.752e-09*pow(Gwest,3) - 7.352e-06*pow(Gwest,2) + 0.02238*Gwest - 0.6954;
+//  Ptop = 4.752e-09*pow(Gtop,3) - 7.352e-06*pow(Gtop,2) + 0.02238*Gtop - 0.6954; 
+//  Pback = 4.752e-09*pow(Gwest,3) - 7.352e-06*pow(Gwest,2) + 0.02238*Gwest - 0.6954;
 
   // Avoid negative power value during night, actually this is correct
   // We can use this negative value to represent power consumption of PV if reviewer argure this point
@@ -59,7 +59,7 @@ void pv_panel::processing()
   if (Ptop < 0){
   P.write(0);
   }else{  
-  P.write((Ptop * 6 + Pback * 4)*20); 
+  P.write((Ptop * 6 + Pback * 4)*42); 
   }
 
   sun_irradiance.write(Gtop);
