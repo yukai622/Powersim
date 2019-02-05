@@ -132,7 +132,7 @@ int sc_main(int argc, char* argv[]){
 //	sc_start();
 	
 	
-	sc_start(ONEDAY*7, sc_core::SC_SEC);
+	sc_start(ONEDAY*7.0, sc_core::SC_SEC);
 //	sc_start(10, sc_core::SC_SEC);
 
 	cout<<"YUKAI Report: The WHOLE SIMULATION LENGTH "<<"====== "<<sc_time_stamp()<<endl;
