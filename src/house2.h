@@ -8,7 +8,8 @@ SCA_TDF_MODULE(house2){
 	ifstream house2powerfile;
 
 	
-	SCA_CTOR(house2):out("out"), rp(0.0), ap(0.0), pf(0.0) {}
+//	SCA_CTOR(house2):out("out"), rp(0.0), ap(0.0), pf(0.0) {}
+	SCA_CTOR(house2):out("out"), rp(0.0) {}
 
 	void set_attributes();
 	
@@ -19,6 +20,6 @@ SCA_TDF_MODULE(house2){
 
 	private:
 	double rp; // real power
-	double ap; // apparent power
-	double pf; // power factor
+//	double ap; // apparent power
+//	double pf; // power factor
 };

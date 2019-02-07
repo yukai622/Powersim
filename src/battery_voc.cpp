@@ -15,7 +15,19 @@ void battery_voc::initialize(){
 void battery_voc::processing(){
 	double tmpcurrent = in.read();
 	
-	tmpsoc = tmpsoc-((tmpcurrent*SIM_STEP)/(3600*204.0)); //Modify the capacity, 150Ah is the reference one
+
+//--------------------------------------------------------------------------------------------------------------------
+//Panasonic 18650 3400mA 
+//Configuration 1 : 60p*40s
+//
+//
+//
+//
+//
+//-------------------------------------------------------------------------------------------------------------------
+
+	tmpsoc = tmpsoc-((tmpcurrent*SIM_STEP)/(3600*3.4*60)); //Modify the capacity, 150Ah is the reference one
+
 
 	double deltacurrent = in2.read();
 	double deltafrequency = in3.read();

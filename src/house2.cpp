@@ -23,7 +23,7 @@ void house2::initialize(){
 
 void house2::processing(){
 
-	house2powerfile >> rp >> ap >> pf;
+	house2powerfile >> rp;
 
 //	cout<< rp<<"\t" << ap<<"\t" << pf<<endl;
 //	cout<<rp<<"The real power value"<<endl;

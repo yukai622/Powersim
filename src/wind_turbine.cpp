@@ -45,7 +45,7 @@ void windturbine::processing()
   
   
 
-  if (t == ONEDAY - 1) {
+  if (t == LENGTH - 1) {
     cout<<"YUKAI Report: Wind Turbine works very well until to the end!"<<endl;
 //    cout<<"Simulation ended: "<<" @"<<sc_time_stamp()<<endl;
     in_wind_speed.close();

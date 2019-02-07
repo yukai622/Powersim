@@ -56,6 +56,17 @@ void pv_panel::processing()
 
   //cout<<Gtop[t]<<endl;
 
+//------------------------------------------------------------------------------------
+//COnfiguration1 : 42 piece
+//
+//
+//
+//
+//
+//
+//-----------------------------------------------------------------------------------
+
+
   if (Ptop < 0){
   P.write(0);
   }else{  
@@ -66,7 +77,7 @@ void pv_panel::processing()
   
 
 
-  if (t == ONEDAY - 1) {
+  if (t == LENGTH - 1) {
     cout<<"YUKAI Report: PV panel works correctly until to the end!"<<endl;
 //    cout<<"Simulation ended: "<<" @"<<sc_time_stamp()<<endl;
     top.close();
