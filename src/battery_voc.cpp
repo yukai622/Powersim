@@ -19,6 +19,10 @@ void battery_voc::processing(){
 //--------------------------------------------------------------------------------------------------------------------
 //Panasonic 18650 3400mA 
 //Configuration 1 : 60p*40s
+//Configuration 2 : 70p*50s
+//Configuration 3 : 80p*60s
+//Configuration 4 : 50p*50s
+//Configuration 5 : 70p*70s
 //
 //
 //
@@ -26,7 +30,7 @@ void battery_voc::processing(){
 //
 //-------------------------------------------------------------------------------------------------------------------
 
-	tmpsoc = tmpsoc-((tmpcurrent*SIM_STEP)/(3600*3.4*60)); //Modify the capacity, 150Ah is the reference one
+	tmpsoc = tmpsoc-((tmpcurrent*SIM_STEP)/(3600*3.4*70)); //Modify the capacity, 150Ah is the reference one
 
 
 	double deltacurrent = in2.read();
@@ -43,7 +47,7 @@ void battery_voc::processing(){
 	
 	
 	//12V 150Ah battery
-	out.write((24.56*pow(tmpsoc,5)-71.5*pow(tmpsoc,4)+78.45*pow(tmpsoc,3)-40.51*pow(tmpsoc,2)+10.23*tmpsoc+4.1)*40);
+	out.write((24.56*pow(tmpsoc,5)-71.5*pow(tmpsoc,4)+78.45*pow(tmpsoc,3)-40.51*pow(tmpsoc,2)+10.23*tmpsoc+4.1)*70);
 	//out2.write(0.0042*exp(-0.07909*tmpsoc)-0.0035);
 	out2.write(0.0005);
 	out3.write(tmpsoc);

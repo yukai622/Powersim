@@ -38,7 +38,7 @@ void cti_bus::processing(){
 
 		Sell_to_grid.write(0.0); // Do not forget merge!
 
-		if(batt_soc > 0.2 ){ // Battery has energy, can provilde power to load to compensate generation is not enough
+		if(batt_soc > 0.1 ){ // Battery has energy, can provilde power to load to compensate generation is not enough
 
 			Ibatt_cnv.write(Ibatt_tmp); // Battery discharge current	
 			Buy_from_grid.write(0.0); // Store the value of buy from grid

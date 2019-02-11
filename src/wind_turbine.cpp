@@ -36,7 +36,7 @@ void windturbine::processing()
   double wtp; 
   
 
-  wtp = 11200*sin(0.15628*wind-0.623) + 2015*sin(0.6514*wind+0.2421)*0.788; 
+  wtp =(11200*sin(0.15628*wind-0.623) + 2015*sin(0.6514*wind+0.2421))*0.788; 
 
   
   power.write(wtp); 

@@ -57,11 +57,11 @@ void pv_panel::processing()
   //cout<<Gtop[t]<<endl;
 
 //------------------------------------------------------------------------------------
-//COnfiguration1 : 42 piece
-//
-//
-//
-//
+//COnfiguration1 : 80 piece
+//COnfiguration2 : 70 piece
+//COnfiguration3 : 60 piece
+//COnfiguration4 : 100 piece
+//COnfiguration5 : 120 piece
 //
 //
 //-----------------------------------------------------------------------------------
@@ -70,7 +70,7 @@ void pv_panel::processing()
   if (Ptop < 0){
   P.write(0);
   }else{  
-  P.write((Ptop * 6 + Pback * 4)*42); 
+  P.write((Ptop * 3 + Pback * 2)*120); 
   }
 
   sun_irradiance.write(Gtop);
