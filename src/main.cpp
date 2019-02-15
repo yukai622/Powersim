@@ -103,9 +103,9 @@ int sc_main(int argc, char* argv[]){
 	//sca_util::sca_decimation(1000);
 	//
 	//To store the values during simualtion
-	sca_util::sca_trace_file* atf = sca_util::sca_create_tabular_trace_file( "config5.txt" );
+	sca_util::sca_trace_file* atf = sca_util::sca_create_tabular_trace_file( "./20houses/config6.txt" );
 
-//	atf->set_mode(sca_decimation(100));
+//	atf->set_mode(sca_decimation(10));
 
 	//Selecting signals to track
 	//
@@ -132,7 +132,7 @@ int sc_main(int argc, char* argv[]){
 //	sc_start();
 	
 	
-	sc_start(ONEDAY*7.0, sc_core::SC_SEC);
+	sc_start(ONEDAY*7, sc_core::SC_SEC);
 //	sc_start(10, sc_core::SC_SEC);
 
 	cout<<"YUKAI Report: The WHOLE SIMULATION LENGTH "<<"====== "<<sc_time_stamp()<<endl;
