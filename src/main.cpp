@@ -103,7 +103,7 @@ int sc_main(int argc, char* argv[]){
 	//sca_util::sca_decimation(1000);
 	//
 	//To store the values during simualtion
-	sca_util::sca_trace_file* atf = sca_util::sca_create_tabular_trace_file( "./20houses/config6.txt" );
+	sca_util::sca_trace_file* atf = sca_util::sca_create_tabular_trace_file( "trace.txt" );
 
 //	atf->set_mode(sca_decimation(10));
 
@@ -115,7 +115,7 @@ int sc_main(int argc, char* argv[]){
 	sca_util::sca_trace(atf,sell,"SELL");
 	
 //	sca_util::sca_trace(atf,Ibatt,"Ibatt");
-	sca_util::sca_trace(atf,SOC,"SOC");
+//	sca_util::sca_trace(atf,SOC,"SOC");
 //	sca_util::sca_trace(atf,Vbatt,"Vbatt");
 //	sca_util::sca_trace(atf,Phouse1,"Phouse1");
 //	sca_util::sca_trace(atf,Phouse2,"Phouse2");
@@ -132,7 +132,7 @@ int sc_main(int argc, char* argv[]){
 //	sc_start();
 	
 	
-	sc_start(ONEDAY*7, sc_core::SC_SEC);
+	sc_start(86400*0.5, sc_core::SC_SEC);
 //	sc_start(10, sc_core::SC_SEC);
 
 	cout<<"YUKAI Report: The WHOLE SIMULATION LENGTH "<<"====== "<<sc_time_stamp()<<endl;

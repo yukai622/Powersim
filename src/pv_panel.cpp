@@ -12,7 +12,7 @@ void pv_panel::initialize()
   //unsigned int i;
   //ifstream top, back; 
   
-  top.open("sun_one_week_april.txt");
+  top.open("/home/chen/power_simulation_journal/power_simulation_complex_wt/work/sun_one_week_april.txt");
   if (!top) {
     cout << "Cannot open irradiance file.\n"<< endl;
     exit(-1);
