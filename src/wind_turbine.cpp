@@ -11,7 +11,7 @@ void windturbine::initialize()
   //unsigned int i;
   //ifstream in_wind_speed; 
   
-  in_wind_speed.open("wind_one_week_1s.txt");
+  in_wind_speed.open("../one_year_inputs/one_year_wind.txt");
 
   if (!in_wind_speed) {
     cout << "Cannot open file.\n"<< endl;
@@ -31,10 +31,13 @@ void windturbine::initialize()
 void windturbine::processing()
 {  
   
+  if(counter%600 == 0){	
   in_wind_speed >> wind;
+  }
 
   double wtp; 
-  
+ 
+  //cout<<wind<<"@"<<sc_time_stamp()<<endl; 
 
   wtp =(11200*sin(0.15628*wind-0.623) + 2015*sin(0.6514*wind+0.2421))*0.788; 
 
@@ -52,6 +55,7 @@ void windturbine::processing()
   }
 
   t++;
+  counter++;
 
 }
 

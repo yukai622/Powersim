@@ -15,11 +15,17 @@ SCA_TDF_MODULE (pv_panel)
 
   ifstream top; // To store the irradiance profile
 
-  SCA_CTOR(pv_panel): P("P"), sun_irradiance("sun_irradiance"), t(0) {}
+  SCA_CTOR(pv_panel): P("P"), sun_irradiance("sun_irradiance"), t(0), counter(0) {}
+
 
   void set_attributes();
 
   void initialize();
 
   void processing();
+
+
+  private:
+  int counter;
+
 };

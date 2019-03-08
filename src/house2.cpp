@@ -8,7 +8,7 @@ void house2::set_attributes(){
 void house2::initialize(){
 	int j =0;
 	
-	house2powerfile.open("../loads/UKLOAD/one_week_h2.txt");
+	house2powerfile.open("../one_year_inputs/one_year_h2.txt");
 	if(!house2powerfile){
 		cout<<"Cannot open loads file.!!!\n"<<endl;
 		
@@ -23,16 +23,14 @@ void house2::initialize(){
 
 void house2::processing(){
 
+	if(counter%10 == 0 || counter == 0){
 	house2powerfile >> rp;
-
-//	cout<< rp<<"\t" << ap<<"\t" << pf<<endl;
-//	cout<<rp<<"The real power value"<<endl;
-//	cout<<"The apparent power is"<<ap<<endl;
-//	cout<<"The power factor is"<<pf<<endl;
-
-
 	out.write(6*rp/0.95);// Effciency
-
+	counter++;
+	}else{
+	out.write(6*rp/0.95);// Effciency
+	counter++;
+	}
 
 }
 

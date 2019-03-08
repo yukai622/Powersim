@@ -9,7 +9,7 @@ SCA_TDF_MODULE(house2){
 
 	
 //	SCA_CTOR(house2):out("out"), rp(0.0), ap(0.0), pf(0.0) {}
-	SCA_CTOR(house2):out("out"), rp(0.0) {}
+	SCA_CTOR(house2):out("out"), rp(0.0),counter(0) {}
 
 	void set_attributes();
 	
@@ -20,6 +20,7 @@ SCA_TDF_MODULE(house2){
 
 	private:
 	double rp; // real power
+	int counter;
 //	double ap; // apparent power
 //	double pf; // power factor
 };

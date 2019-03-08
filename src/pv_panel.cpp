@@ -12,7 +12,7 @@ void pv_panel::initialize()
   //unsigned int i;
   //ifstream top, back; 
   
-  top.open("/home/chen/power_simulation_journal/power_simulation_complex_wt/work/sun_one_week_april.txt");
+  top.open("../one_year_inputs/one_year_sun.txt");
   if (!top) {
     cout << "Cannot open irradiance file.\n"<< endl;
     exit(-1);
@@ -40,9 +40,12 @@ void pv_panel::initialize()
 void pv_panel::processing()
 {  
   
+  if(counter%60 == 0.0){
   top >> Gtop;
   Gwest = Gtop;
+  }
 
+  //cout<<Gtop<<"@"<<sc_time_stamp()<<endl;
   double Ptop, Pback; 
   
   // Original equations
@@ -85,6 +88,7 @@ void pv_panel::processing()
   }
 
   t++;
+  counter++;
 
 }
 

@@ -14,11 +14,14 @@ SCA_TDF_MODULE (windturbine)
 
   unsigned int t;
 
-  SCA_CTOR(windturbine): power("power"), windspeed("windspeed"),t(0) {}
+  SCA_CTOR(windturbine): power("power"), windspeed("windspeed"),t(0), counter(0) {}
 
   void set_attributes();
 
   void initialize();
 
   void processing();
+
+	private:
+  	int counter;
 };

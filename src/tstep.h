@@ -2,9 +2,7 @@
 #define _TSTEP
 #define SIM_STEP 1
 
-#define ONEDAY 86400
-#define ONEWEEK 86400
-#define LENGTH 604800
+#define LENGTH 86400*20
 
 
 #define VBUS 430
