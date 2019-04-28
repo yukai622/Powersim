@@ -21,10 +21,10 @@ void house5::processing(){
 
 	if(counter%10 == 0 || counter == 0){
 	house5powerfile >> rp;
-	out.write((rp*7)/0.95);// Effciency
+	out.write((rp*5)/0.95);// Effciency
 	counter++;
 	}else{
-	out.write((rp*7)/0.95);// Effciency
+	out.write((rp*5)/0.95);// Effciency
 	counter++;
 	}
 

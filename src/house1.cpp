@@ -24,10 +24,10 @@ void house1::processing(){
 
 	if(counter%10 == 0 || counter == 0){
 		house1powerfile >> rp;
-		out.write(7*rp/0.95);// Effciency
+		out.write(6*rp/0.95);// Effciency
 		counter++;
 	}else{
-		out.write(7*rp/0.95);// Effciency
+		out.write(6*rp/0.95);// Effciency
 		counter++;
 	}
 

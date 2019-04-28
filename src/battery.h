@@ -8,6 +8,8 @@
 SC_MODULE(battery){
 	// interface and internal components declaration
 	sca_tdf::sca_in<double> I; // Ib current
+//	sca_tdf::sca_in<int> snum; // s number
+//	sca_tdf::sca_in<int> pnum; // p number
 	sca_tdf::sca_out<double> V; // Vb battery voltage
 	sca_tdf::sca_out<double> SOC; //SOC
 
@@ -30,6 +32,8 @@ SC_MODULE(battery){
 		voc->in(I);
 		voc->in2(deltac);
 		voc->in3(deltaf);
+//		voc->in4(snum);
+//		voc->in5(pnum);
 		voc->out(Voc);
 		voc->out2(Rs);
 		voc->out3(SOC);

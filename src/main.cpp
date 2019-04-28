@@ -1,4 +1,5 @@
-#include "systemc-ams.h"
+#include "stdio.h"
+#include "stdlib.h"
 #include "battery.h"
 #include "cti_bus.h"
 #include "pv_panel.h"
@@ -9,11 +10,21 @@
 #include "house1.h"
 #include "house2.h"
 #include "house5.h"
+#include "tstep.h"
+
+
 
 
 int sc_main(int argc, char* argv[]){
 
 	sc_core::sc_set_time_resolution(1.0,sc_core::SC_SEC);	
+
+	// Change configurations
+//
+	int batt_s = atoi(argv[1]);
+	int batt_p = atoi(argv[2]);
+	int pv_num = atoi(argv[3]);
+
 
 	//Signals for battery parts
 	//sca_tdf::sca_signal<double> Ibatt, Vbatt, SOC, Ibatt_cnv, Vbatt_cnv;
@@ -48,11 +59,17 @@ int sc_main(int argc, char* argv[]){
 
 	cti_bus cti_bus("cti_bus");
 
+	// Pass the data
+	batt.voc->set_data(batt_s,batt_p);
+	pv.set_data(pv_num);
+
 
 	//----------------------Binding-------------------------------------------------
 	//Battery
 	batt.I(Ibatt);
 	batt.V(Vbatt);
+	//	batt.snum(batt_s);
+	//	batt.pnum(batt_p);
 	batt.SOC(SOC);
 
 	//Battery converter
@@ -63,6 +80,7 @@ int sc_main(int argc, char* argv[]){
 
 	//PV panel
 	pv.P(Power_pv);
+	//	pv.pnum(pv_num);
 	pv.sun_irradiance(sun_irradiance);
 
 	//PV converter
@@ -117,17 +135,17 @@ int sc_main(int argc, char* argv[]){
 	//	sca_util::sca_trace(atf,buy,"BUY");
 	//	sca_util::sca_trace(atf,sell,"SELL");
 
-	//	sca_util::sca_trace(atf,Ibatt,"Ibatt");
-	//	sca_util::sca_trace(atf,SOC,"SOC");
+	//		sca_util::sca_trace(atf,Ibatt,"Ibatt");
+	//		sca_util::sca_trace(atf,SOC,"SOC");
 	//	sca_util::sca_trace(atf,Vbatt,"Vbatt");
 	//	sca_util::sca_trace(atf,Phouse1,"Phouse1");
 	//	sca_util::sca_trace(atf,Phouse2,"Phouse2");
 	//	sca_util::sca_trace(atf,Phouse5,"Phouse5");
 	//
-	//	sca_util::sca_trace(atf,wind_speed,"Wind");
+	//		sca_util::sca_trace(atf,wind_speed,"Wind");
 	//	sca_util::sca_trace(atf,Iwind_inv,"Wind_current");
 	//	sca_util::sca_trace(atf,Ipv_cnv,"Pv_current");
-	//	sca_util::sca_trace(atf,Power_wind,"Power_wind");
+	//		sca_util::sca_trace(atf,Power_wind,"Power_wind");
 
 	//	sca_util::sca_trace(atf,sun_irradiance,"Sun_profile");
 	//	sca_util::sca_trace(atf,Power_pv,"Power_pv");
@@ -136,12 +154,16 @@ int sc_main(int argc, char* argv[]){
 
 
 	//      sc_core::sc_set_time_resolution(1.0,sc_core::SC_SEC);	
-//	sc_start(LENGTH, sc_core::SC_SEC);
-		sc_start(LENGTH, sc_core::SC_SEC);
+	//	sc_start(LENGTH, sc_core::SC_SEC);
 
-	cout<<"YUKAI Report: The WHOLE SIMULATION LENGTH "<<"====== "<<sc_time_stamp()<<endl;
+	sc_start(LENGTH, sc_core::SC_SEC);
+
+//	cout<<"Battery bank configuration is "<<batt_s<<" X "<<batt_p<<" (p x s)."<<endl;
+	cout<<"Report: The WHOLE SIMULATION LENGTH "<<"====== "<<sc_time_stamp()<<endl;
 
 	//	sca_util::sca_close_tabular_trace_file( atf );	
 
 	return 0;
+
+
 }

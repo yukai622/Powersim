@@ -73,6 +73,15 @@ void cti_bus::processing(){
 
 			Ibatt_cnv.write(0.0); // Battery no action
 			Sell_to_grid.write(Ibatt_tmp * VBUS); // Store the value for selling to grid
+
+			if(int(sc_time_stamp().to_seconds())%86400<=25200){	
+				total_sell_f1 = total_sell_f1 + Ibatt_tmp*VBUS;
+			}else if(int(sc_time_stamp().to_seconds())%86400<=68400){
+				total_sell_f2 = total_sell_f2 + Ibatt_tmp*VBUS;
+			}else{
+				total_sell_f3 = total_sell_f3 + Ibatt_tmp*VBUS;
+			}
+
 			total_sell = total_sell + Ibatt_tmp * VBUS;
 
 		}
@@ -82,11 +91,14 @@ void cti_bus::processing(){
 
 
 	if(counter == LENGTH){
-		cout<<"Total buy power from main grid is "<<total_buy/1000<<"kW."<<endl;
-		cout<<"Total buy power at f1 price from main grid is "<<total_buy_f1/1000<<"kW."<<endl;
-		cout<<"Total buy power at f2 price from main grid is "<<total_buy_f2/1000<<"kW."<<endl;
-		cout<<"Total buy power at f3 price from main grid is "<<total_buy_f3/1000<<"kW."<<endl;
-		cout<<"Total sell power to main grid is "<<total_sell/1000<<"kW."<<endl;
+		cout<<"Total buy power from main grid is "<<total_buy/3600000<<"kWh."<<endl;
+		cout<<"Total buy power at f1 price from main grid is "<<total_buy_f1/3600000<<"kWh."<<endl;
+		cout<<"Total buy power at f2 price from main grid is "<<total_buy_f2/3600000<<"kWh."<<endl;
+		cout<<"Total buy power at f3 price from main grid is "<<total_buy_f3/3600000<<"kWh."<<endl;
+		cout<<"Total sell power to main grid is "<<total_sell/3600000<<"kWh."<<endl;
+		cout<<"Total sell power at f1 price from main grid is "<<total_sell_f1/3600000<<"kWh."<<endl;
+		cout<<"Total sell power at f2 price from main grid is "<<total_sell_f2/3600000<<"kWh."<<endl;
+		cout<<"Total sell power at f3 price from main grid is "<<total_sell_f3/3600000<<"kWh."<<endl;
 	}
 }
 

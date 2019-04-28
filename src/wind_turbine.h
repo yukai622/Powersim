@@ -8,13 +8,12 @@ SCA_TDF_MODULE (windturbine)
   
   sca_tdf::sca_out<double> power,windspeed; 
 
-  double wind;
 
   ifstream in_wind_speed;
 
   unsigned int t;
 
-  SCA_CTOR(windturbine): power("power"), windspeed("windspeed"),t(0), counter(0) {}
+  SCA_CTOR(windturbine): power("power"), windspeed("windspeed"),t(0), counter(0), wind(0.0) {}
 
   void set_attributes();
 
@@ -24,4 +23,5 @@ SCA_TDF_MODULE (windturbine)
 
 	private:
   	int counter;
+	double wind;
 };

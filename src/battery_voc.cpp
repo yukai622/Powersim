@@ -7,6 +7,11 @@ void battery_voc::set_attributes(){
 	out4.set_timestep(SIM_STEP,sc_core::SC_SEC);
 }
 
+void battery_voc::set_data(int &batt_s, int &batt_p){
+	batt_snum = batt_s;
+	batt_pnum = batt_p;
+}
+
 void battery_voc::initialize(){
 
 }
@@ -14,28 +19,23 @@ void battery_voc::initialize(){
 
 void battery_voc::processing(){
 	double tmpcurrent = in.read();
+//	batt_s = in4.read();
+//	batt_p = in5.read();
 
 
-	//--------------------------------------------------------------------------------------------------------------------
-	//Panasonic 18650 3400mA 
-	//Configuration 1 : 60p*40s
-	//Configuration 2 : 70p*50s
-	//Configuration 3 : 80p*60s
-	//Configuration 4 : 50p*50s
-	//Configuration 5 : 70p*70s
-	//
-	//
-	//
-	//
-	//
-	//-------------------------------------------------------------------------------------------------------------------
-
-	tmpsoc = tmpsoc-((tmpcurrent*SIM_STEP)/(3600*3.4*60)); //Modify the capacity, 150Ah is the reference one
+	tmpsoc = tmpsoc-((tmpcurrent*SIM_STEP)/(3600*3.4*batt_snum)); //Modify the capacity, 150Ah is the reference one
 
 	double deltacurrent = in2.read();
 	double deltafrequency = in3.read();
 
 	tmpsoc = tmpsoc - deltacurrent - deltafrequency;
+
+	if(tmpsoc > 0.9){
+		tmpsoc = 0.9;
+	}
+	if(tmpsoc < 0.1){
+		tmpsoc = 0.1;
+	}
 
 	//	Battery mangagement unit: if the SOC of battery less than 10%, the battery stop to work
 	//	if(tmpsoc<=0.1){
@@ -45,12 +45,14 @@ void battery_voc::processing(){
 
 
 	//12V 150Ah battery
-	out.write((24.56*pow(tmpsoc,5)-71.5*pow(tmpsoc,4)+78.45*pow(tmpsoc,3)-40.51*pow(tmpsoc,2)+10.23*tmpsoc+4.1)*70.5);
+	out.write((24.56*pow(tmpsoc,5)-71.5*pow(tmpsoc,4)+78.45*pow(tmpsoc,3)-40.51*pow(tmpsoc,2)+10.23*tmpsoc+4.1)*batt_pnum);
 	//out2.write(0.0042*exp(-0.07909*tmpsoc)-0.0035);
 	out2.write(0.0005);
 	out3.write(tmpsoc);
 	out4.write(tmpsoc);
 
-
-
+	if (t == LENGTH - 1) {
+	cout<<"Battery bank configuration is "<<batt_snum<<" X "<<batt_pnum<<" (p x s)."<<endl;
+	}
+        t++;
 }
