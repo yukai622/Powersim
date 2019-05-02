@@ -37,10 +37,19 @@ void cti_bus::processing(){
 
 	if(Ibatt_tmp >= 0){ // Load is larger than generation
 
+		if(int(sc_time_stamp().to_seconds())%86400<=25200){
+			own_use = own_use + total_generation/3600000*0.2;
+		}else if(int(sc_time_stamp().to_seconds())%86400<=68400){
+			own_use = own_use + total_generation/3600000*0.215;
+		}else{
+			own_use = own_use + total_generation/3600000*0.22;
+		}
+
 		Sell_to_grid.write(0.0); // Do not forget merge!
 
 		if(batt_soc > 0.1 ){ // Battery has energy, can provilde power to load to compensate generation is not enough
 
+			own_use = own_use + Ibatt_tmp*VBUS/3600000*0.215;
 			Ibatt_cnv.write(Ibatt_tmp); // Battery discharge current	
 			Buy_from_grid.write(0.0); // Store the value of buy from grid
 
@@ -61,6 +70,8 @@ void cti_bus::processing(){
 		}
 
 	}else{ // Load is less than generation
+
+		own_use = own_use + total_load/3600000*0.215;
 
 		Buy_from_grid.write(0.0);
 
@@ -99,6 +110,8 @@ void cti_bus::processing(){
 		cout<<"Total sell power at f1 price from main grid is "<<total_sell_f1/3600000<<"kWh."<<endl;
 		cout<<"Total sell power at f2 price from main grid is "<<total_sell_f2/3600000<<"kWh."<<endl;
 		cout<<"Total sell power at f3 price from main grid is "<<total_sell_f3/3600000<<"kWh."<<endl;
+		cout<<"======================================================================"<<endl;
+		cout<<"Renwable generated power for own use is "<<own_use<<" $."<<endl;
 	}
 }
 

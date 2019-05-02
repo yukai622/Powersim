@@ -6,7 +6,7 @@
 
 #define VBUS 430
 
-#define WT_NUM 1
+#define WT_NUM 0
 
 
 
