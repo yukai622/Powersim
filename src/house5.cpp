@@ -16,15 +16,22 @@ void house5::initialize(){
 	}
 	
 }
+// tb1 = 5
+// tb2 = 5 tb6
+// tb3 = 5
+// tb4 = 4
+// tb5 = 4
+// tb7 = 3
+// tb8 = 7
 
 void house5::processing(){
 
 	if(counter%10 == 0 || counter == 0){
 	house5powerfile >> rp;
-	out.write((rp*5)/0.95);// Effciency
+	out.write((rp*7)/0.95);// Effciency
 	counter++;
 	}else{
-	out.write((rp*5)/0.95);// Effciency
+	out.write((rp*7)/0.95);// Effciency
 	counter++;
 	}
 

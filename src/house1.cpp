@@ -20,14 +20,22 @@ void house1::initialize(){
 
 }
 
+//tb1 6
+//tb2 6 tb6
+//tb3 7
+//tb4 6
+//tb5 6
+//tb7 10
+//tb8 2
+
 void house1::processing(){
 
 	if(counter%10 == 0 || counter == 0){
 		house1powerfile >> rp;
-		out.write(6*rp/0.95);// Effciency
+		out.write(2*rp/0.95);// Effciency
 		counter++;
 	}else{
-		out.write(6*rp/0.95);// Effciency
+		out.write(2*rp/0.95);// Effciency
 		counter++;
 	}
 

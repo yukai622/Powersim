@@ -10,8 +10,9 @@ void windturbine::initialize()
 {
 	//unsigned int i;
 	//ifstream in_wind_speed; 
-
-	in_wind_speed.open("../one_year_inputs/one_year_wind.txt");
+//tb1 old
+//tb2 tb3 tb4 new tb5 new tb6 old tb7 old tb8 new
+	in_wind_speed.open("../one_year_inputs/one_year_wind_new.txt");
 
 	if (!in_wind_speed) {
 		cout << "Cannot open file.\n"<< endl;

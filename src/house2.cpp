@@ -21,14 +21,22 @@ void house2::initialize(){
 	
 }
 
+// tb1 6
+// tb2 6 tb6
+// tb3 7
+// tb4 7
+// tb5 7
+// tb7 4
+// tb8 8
+
 void house2::processing(){
 
 	if(counter%10 == 0 || counter == 0){
 	house2powerfile >> rp;
-	out.write(6*rp/0.95);// Effciency
+	out.write(8*rp/0.95);// Effciency
 	counter++;
 	}else{
-	out.write(6*rp/0.95);// Effciency
+	out.write(8*rp/0.95);// Effciency
 	counter++;
 	}
 
