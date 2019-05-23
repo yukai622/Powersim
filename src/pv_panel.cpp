@@ -19,7 +19,7 @@ void pv_panel::initialize()
 	//unsigned int i;
 	//ifstream top, back; 
 
-	top.open("../one_year_inputs/one_year_sun.txt"); // tb1 old tb2 new tb3 new tb4 new tb5 old tb6 new tb7 tb8 old
+	top.open("../one_year_inputs/one_year_sun_south.txt"); // tb1 old tb2 new tb3 new tb4 new tb5 old tb6 new tb7 tb8 old
 	if (!top) {
 		cout << "Cannot open irradiance file.\n"<< endl;
 		exit(-1);
@@ -74,7 +74,7 @@ void pv_panel::processing()
 		P.write(0);
 	}else{  
 
-		P.write((Ptop + Pback)*7.5 * pv_number);// One Ptop + Pback is 300W 
+		P.write((Ptop + Pback)*7.5 * pv_number );// One Ptop + Pback is 300W 
 
 	}
 
@@ -93,10 +93,4 @@ void pv_panel::processing()
 	counter++;
 
 }
-
-
-
-
-
-
 

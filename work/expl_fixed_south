@@ -1,0 +1,716 @@
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 100 X 122 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 0 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 21129.5kWh.
+Total buy power at f1 price from main grid is 4189.65kWh.
+Total buy power at f2 price from main grid is 12022.2kWh.
+Total buy power at f3 price from main grid is 4917.67kWh.
+Total sell power to main grid is -165.75kWh.
+Total sell power at f1 price from main grid is -85.8734kWh.
+Total sell power at f2 price from main grid is -68.6017kWh.
+Total sell power at f3 price from main grid is -11.2749kWh.
+======================================================================
+Renwable generated power for own use is 8362.81 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 85 X 134 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 3 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 19400.4kWh.
+Total buy power at f1 price from main grid is 3771.12kWh.
+Total buy power at f2 price from main grid is 10976.4kWh.
+Total buy power at f3 price from main grid is 4652.9kWh.
+Total sell power to main grid is -285.317kWh.
+Total sell power at f1 price from main grid is -164.505kWh.
+Total sell power at f2 price from main grid is -99.8869kWh.
+Total sell power at f3 price from main grid is -20.9246kWh.
+======================================================================
+Renwable generated power for own use is 8732.24 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 60 X 193 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 6 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 17646.9kWh.
+Total buy power at f1 price from main grid is 3346.56kWh.
+Total buy power at f2 price from main grid is 9996.25kWh.
+Total buy power at f3 price from main grid is 4304.08kWh.
+Total sell power to main grid is -393.886kWh.
+Total sell power at f1 price from main grid is -191.538kWh.
+Total sell power at f2 price from main grid is -163.241kWh.
+Total sell power at f3 price from main grid is -39.1071kWh.
+======================================================================
+Renwable generated power for own use is 9107.26 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 977 X 10 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 9 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 16262.1kWh.
+Total buy power at f1 price from main grid is 2973.23kWh.
+Total buy power at f2 price from main grid is 9231.37kWh.
+Total buy power at f3 price from main grid is 4057.54kWh.
+Total sell power to main grid is -809.21kWh.
+Total sell power at f1 price from main grid is -325.855kWh.
+Total sell power at f2 price from main grid is -419.761kWh.
+Total sell power at f3 price from main grid is -63.5938kWh.
+======================================================================
+Renwable generated power for own use is 9403.5 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 128 X 70 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 12 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 14843.7kWh.
+Total buy power at f1 price from main grid is 2578.29kWh.
+Total buy power at f2 price from main grid is 8508.25kWh.
+Total buy power at f3 price from main grid is 3757.17kWh.
+Total sell power to main grid is -1273.97kWh.
+Total sell power at f1 price from main grid is -487.816kWh.
+Total sell power at f2 price from main grid is -628.561kWh.
+Total sell power at f3 price from main grid is -157.592kWh.
+======================================================================
+Renwable generated power for own use is 9708.63 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 163 X 50 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 15 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 13546.5kWh.
+Total buy power at f1 price from main grid is 2181.7kWh.
+Total buy power at f2 price from main grid is 7824.4kWh.
+Total buy power at f3 price from main grid is 3540.36kWh.
+Total sell power to main grid is -1824.52kWh.
+Total sell power at f1 price from main grid is -647.656kWh.
+Total sell power at f2 price from main grid is -973.102kWh.
+Total sell power at f3 price from main grid is -203.763kWh.
+======================================================================
+Renwable generated power for own use is 9989.21 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 367 X 20 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 18 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 12421.9kWh.
+Total buy power at f1 price from main grid is 1865.83kWh.
+Total buy power at f2 price from main grid is 7171.87kWh.
+Total buy power at f3 price from main grid is 3384.19kWh.
+Total sell power to main grid is -2539.97kWh.
+Total sell power at f1 price from main grid is -897.596kWh.
+Total sell power at f2 price from main grid is -1361.88kWh.
+Total sell power at f3 price from main grid is -280.495kWh.
+======================================================================
+Renwable generated power for own use is 10233.3 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 653 X 10 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 21 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 11511.7kWh.
+Total buy power at f1 price from main grid is 1614.26kWh.
+Total buy power at f2 price from main grid is 6609.33kWh.
+Total buy power at f3 price from main grid is 3288.08kWh.
+Total sell power to main grid is -3446.38kWh.
+Total sell power at f1 price from main grid is -1298.34kWh.
+Total sell power at f2 price from main grid is -1776.45kWh.
+Total sell power at f3 price from main grid is -371.582kWh.
+======================================================================
+Renwable generated power for own use is 10431.2 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 143 X 40 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 24 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 10750.2kWh.
+Total buy power at f1 price from main grid is 1420.15kWh.
+Total buy power at f2 price from main grid is 6122.21kWh.
+Total buy power at f3 price from main grid is 3207.79kWh.
+Total sell power to main grid is -4572kWh.
+Total sell power at f1 price from main grid is -1711.75kWh.
+Total sell power at f2 price from main grid is -2375.74kWh.
+Total sell power at f3 price from main grid is -484.499kWh.
+======================================================================
+Renwable generated power for own use is 10596.5 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 491 X 10 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 27 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 10254.8kWh.
+Total buy power at f1 price from main grid is 1337.39kWh.
+Total buy power at f2 price from main grid is 5789.53kWh.
+Total buy power at f3 price from main grid is 3127.93kWh.
+Total sell power to main grid is -5883.77kWh.
+Total sell power at f1 price from main grid is -2214.74kWh.
+Total sell power at f2 price from main grid is -3107.87kWh.
+Total sell power at f3 price from main grid is -561.16kWh.
+======================================================================
+Renwable generated power for own use is 10704 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 100 X 41 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 30 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 10042.4kWh.
+Total buy power at f1 price from main grid is 1369.59kWh.
+Total buy power at f2 price from main grid is 5583.44kWh.
+Total buy power at f3 price from main grid is 3089.41kWh.
+Total sell power to main grid is -7560.53kWh.
+Total sell power at f1 price from main grid is -2850.15kWh.
+Total sell power at f2 price from main grid is -3984.67kWh.
+Total sell power at f3 price from main grid is -725.717kWh.
+======================================================================
+Renwable generated power for own use is 10750.5 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 70 X 47 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 33 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 10182.6kWh.
+Total buy power at f1 price from main grid is 1498.97kWh.
+Total buy power at f2 price from main grid is 5639.07kWh.
+Total buy power at f3 price from main grid is 3044.57kWh.
+Total sell power to main grid is -9549.4kWh.
+Total sell power at f1 price from main grid is -3656.13kWh.
+Total sell power at f2 price from main grid is -5059.35kWh.
+Total sell power at f3 price from main grid is -833.92kWh.
+======================================================================
+Renwable generated power for own use is 10720.9 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 62 X 40 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 36 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 10758.1kWh.
+Total buy power at f1 price from main grid is 1674.65kWh.
+Total buy power at f2 price from main grid is 5880.41kWh.
+Total buy power at f3 price from main grid is 3203.06kWh.
+Total sell power to main grid is -11972.3kWh.
+Total sell power at f1 price from main grid is -4719.23kWh.
+Total sell power at f2 price from main grid is -6324.42kWh.
+Total sell power at f3 price from main grid is -928.691kWh.
+======================================================================
+Renwable generated power for own use is 10597.7 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 167 X 10 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 39 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 12158.8kWh.
+Total buy power at f1 price from main grid is 1898.71kWh.
+Total buy power at f2 price from main grid is 6536.91kWh.
+Total buy power at f3 price from main grid is 3723.2kWh.
+Total sell power to main grid is -15190.7kWh.
+Total sell power at f1 price from main grid is -6137.25kWh.
+Total sell power at f2 price from main grid is -7977.73kWh.
+Total sell power at f3 price from main grid is -1075.68kWh.
+======================================================================
+Renwable generated power for own use is 10296.8 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 43 X 20 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 42 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 14604.8kWh.
+Total buy power at f1 price from main grid is 2153.93kWh.
+Total buy power at f2 price from main grid is 8050.64kWh.
+Total buy power at f3 price from main grid is 4400.25kWh.
+Total sell power to main grid is -19513.3kWh.
+Total sell power at f1 price from main grid is -7991.74kWh.
+Total sell power at f2 price from main grid is -10118.2kWh.
+Total sell power at f3 price from main grid is -1403.37kWh.
+======================================================================
+Renwable generated power for own use is 9771.08 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
+Battery bank configuration is 10 X 5 (p x s).
+Report: PV panel works correctly until to the end!
+PV array has 45 panels!  @31535999 s
+YUKAI Report: Wind Turbine works very well until to the end!
+Total buy power from main grid is 19301.1kWh.
+Total buy power at f1 price from main grid is 3185.23kWh.
+Total buy power at f2 price from main grid is 10975.8kWh.
+Total buy power at f3 price from main grid is 5140.02kWh.
+Total sell power to main grid is -26051.4kWh.
+Total sell power at f1 price from main grid is -10149kWh.
+Total sell power at f2 price from main grid is -13122.4kWh.
+Total sell power at f3 price from main grid is -2779.99kWh.
+======================================================================
+Renwable generated power for own use is 8761.5 $.
+Report: The WHOLE SIMULATION LENGTH ====== 31536000 s
+
+Warning: (W516) default time unit changed to time resolution
+In file: ../../../src/sysc/kernel/sc_time.cpp:412
+
+Info: SystemC-AMS: 
+	15 SystemC-AMS modules instantiated
+	2 SystemC-AMS views created
+	12 SystemC-AMS synchronization objects/solvers instantiated
+
+
+Info: SystemC-AMS: 
+	1 dataflow clusters instantiated
+	  cluster 0:
+		12 dataflow modules/solver, contains e.g. module: batt.voc
+		12 elements in schedule list,  
+		1 s cluster period, 
+		ratio to lowest:  1              e.g. module: batt.voc
+		ratio to highest: 1 sample time  e.g. module: batt.voc
+		0 connections to SystemC de, 0 connections from SystemC de
+
+
+Info: SystemC-AMS: 
+	ELN solver instance: sca_linear_solver_0 (cluster 0)
+		has 4 equations for 4 modules (e.g. batt.batt.Voc),
+		3 inputs and 1 outputs to other (TDF) SystemC-AMS domains,
+		0 inputs and 0 outputs to SystemC de.
+		1 s initial time step
+
